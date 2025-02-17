@@ -1,3 +1,7 @@
+<div *ngIf="nome == 'rafael teles'">
+    <label>Função</label>
+    <input type="text"><br>
+</div>
 Nome
 <input type="text" [(ngModel)]="nome"><br>
 Telefone
@@ -11,3 +15,4 @@ Nome {{nome}}<br>
 Telefone {{telefone}}<br>
 Email {{email}}<br>
 Descrição {{descricao}}<br>
+<button (click)="adicionarCliente()">Confirmar</button>

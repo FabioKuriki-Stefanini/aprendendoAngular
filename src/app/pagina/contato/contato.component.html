@@ -4,8 +4,30 @@
         <h2>Preencha os dados abaixo:</h2>
         <app-formulario></app-formulario>
     </div>
-    <div id="divPrincipal2">
+    <!-- <div id="divPrincipal2">
         <h2>Preencha os dados abaixo:</h2>
         <app-formulario-reativo></app-formulario-reativo>
+    </div> -->
+    <div>
+        <h2>Clientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- iteração com a lista clientes, onde posicao recebe o index(posicao) e o id, tr + valor da posicao -->
+                <tr *ngFor="let cliente of clientes; let posicao=index" [id]="'tr' + posicao">
+                    <td [style.color]="cliente.nome == 'fabio'? 'red': 'black'">{{cliente.nome}}</td>
+                    <td>{{cliente.telefone}}</td>
+                    <td>{{cliente.email}}</td>
+                    <td>{{cliente.descricao}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

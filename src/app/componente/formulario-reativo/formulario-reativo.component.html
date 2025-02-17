@@ -1,0 +1,16 @@
+<form [formGroup]="formulario">
+    Nome
+    <input name="nome" type="text" formControlName="nome"><br>
+    Telefone
+    <input name="telefone" type="number" formControlName="telefone"><br>
+    Email
+    <input name="email" type="email" formControlName="email"><br>
+    Descrição
+    <textarea name="descricao" formControlName="descricao"></textarea>
+</form>
+<h2>Confirme os dados:</h2>
+Nome {{formulario.value.nome}}<br>
+Telefone {{formulario.value.telefone}}<br>
+Email {{formulario.value.email}}<br>
+Descrição {{formulario.value.descricao}}<br>
+<button type="submit" [disabled]="!formulario.valid">Confirmar</button>

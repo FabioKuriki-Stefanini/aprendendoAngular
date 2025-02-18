@@ -1,0 +1,25 @@
+//GET - Ler
+http://localhost:3000/curso
+
+###
+
+//POST - Criar
+POST http://localhost:3000/curso HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "java"
+}
+
+###
+//PUT - Atualizar
+PUT http://localhost:3000/curso/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "angular.js"
+}
+
+###
+//DELETE - Deletar
+DELETE http://localhost:3000/curso/1 
